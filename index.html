@@ -37,7 +37,7 @@ h1 {
 
 .card {
     padding: 10px 25px 10px 25px;
-    border-radius: 5px;
+    border-radius: 3px;
     background: #f2f2f2;
     color: #333333;
     display: inline-block;
@@ -73,6 +73,7 @@ h1 {
     /* border-right: 2px solid #295C7B; */
     font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
+    font-weight: italic;
 }
 .greet{
     
@@ -114,15 +115,10 @@ document.getElementById('date').innerHTML = today.toDateString();
 
 function clock() {
 var today = new Date();
-var hour = zeros(twelveHour(today.getHours()));
+var hour = zeros(today.getHours());
 var minutes = zeros(today.getMinutes());
 var seconds = zeros(today.getSeconds());
-if(today.getHours() >=12){
-    seconds+=" pm"
-}
-else{
-    seconds+=" am"
-}
+
 hrs = today.getHours();
 if (hrs < 12)
         greet = 'Good Morning  Julien';
